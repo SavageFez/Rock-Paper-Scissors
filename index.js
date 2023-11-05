@@ -22,8 +22,8 @@ function getComputerChoice() {
 
 
 function getPlayerChoice() {
-    let choice = prompt("Select Rock, Paper, or Scissors").toUpperCase();
-    return choice;
+    //let choice = prompt("Select Rock, Paper, or Scissors").toUpperCase();
+    //return choice;
 }
 
 function playRound(cpu, player) {
