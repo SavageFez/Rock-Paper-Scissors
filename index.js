@@ -6,61 +6,25 @@ function getComputerChoice() {
     
     switch (randomNumber) {
         case 1:
-            //console.log("Computer Choice: Rock");
-            return "ROCK";
+            return rock;
             break;
         case 2:
-            //console.log("Computer Choice: Paper");
-            return "PAPER";
+            return paper;
             break;
         case 3:
-            //console.log("Computer Choice: Scissors");
-            return "SCISSORS";
+            return scissors;
             break;
     }
 }
 
 
 function getPlayerChoice() {
-    //let choice = prompt("Select Rock, Paper, or Scissors").toUpperCase();
-    //return choice;
+    // Get Player Choice by Button
 }
 
 function playRound(cpu, player) {
-    cpu = getComputerChoice();
-    player = getPlayerChoice();
-
-
-    console.log("Computer Choice: " + cpu);
-    console.log("Player Choice: " + player);
-
-    if (cpu == "ROCK" && player == "ROCK") {
-        console.log("DRAW!");
-    } else if (cpu == "ROCK" && player == "PAPER") {
-        console.log("YOU WIN! PAPER BEATS ROCK!");
-        return true;
-    } else if (cpu == "ROCK" && player == "SCISSORS") {
-        console.log("YOU LOSE! ROCK BEATS SCISSORS!");
-        return false;
-    } else if (cpu == "PAPER" && player == "PAPER") {
-        console.log("DRAW!");
-    } else if (cpu == "PAPER" && player == "ROCK") {
-        console.log("YOU LOSE! PAPER BEATS ROCK!");
-        return false;
-    } else if (cpu == "PAPER" && player == "SCISSORS") {
-        console.log("YOU WIN! SCISSORS BEATS PAPER!");
-        return true;
-    } else if (cpu == "SCISSORS" && player == "SCISSORS") {
-        console.log("DRAW!");
-    } else if (cpu == "SCISSORS" && player == "PAPER") {
-        console.log("YOU LOSE! SCISSORS BEATS PAPER!");
-        return false;
-    } else if (cpu == "SCISSORS" && player == "ROCK") {
-        console.log("YOU WIN! ROCK BEATS SCISSORS!");
-        return true;
-    } else {
-        return console.error("Failed at playRound");
-    }
+    // cpu = getComputerChoice();
+    // player = getPlayerChoice();
 }
 
 let cpuScore = 0;
@@ -68,7 +32,8 @@ let playerScore = 0;
 let drawScore = 0;
 
 for (let i = 5; i > 0; i--) {
-    
+    // Update Score in Results
+    // Add Reset Button that Resets Game
     result = playRound();
 
     if (result == false) {
@@ -79,7 +44,4 @@ for (let i = 5; i > 0; i--) {
         drawScore += 1;
     }
 }
-
-console.log("Computer Score: " + cpuScore + " | " + "Player Score: " + playerScore + " | " + "Draws:" + drawScore);
-
 
